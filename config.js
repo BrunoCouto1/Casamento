@@ -42,7 +42,7 @@ window.WEDDING_CONFIG = {
   // DADOS PIX
   // SUBSTITUIR ANTES DE DIVULGAR O SITE.
   pix: {
-    key: "19998169995",
+    key: "+5519998169995",
     receiver: "BRUNO GUILHERME COUTO",
     city: "HORTOLANDIA",
     txid: "CASAMENTO2027"
