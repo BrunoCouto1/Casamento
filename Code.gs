@@ -1,4 +1,3 @@
-```javascript
 function doPost(e) {
 
   const planilha = SpreadsheetApp.getActiveSpreadsheet();
@@ -62,4 +61,4 @@ function doGet() {
     .createTextOutput("Sistema de confirmação do casamento ativo!");
 
 }
-```
+
