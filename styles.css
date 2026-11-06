@@ -1,9 +1,14 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -15,8 +20,16 @@ body {
   text-align: center;
 }
 
+img {
+  max-width: 100%;
+}
+
+/* ==========================================
+   CABEÇALHO E NAVEGAÇÃO
+========================================== */
+
 header {
-  height: 70px;
+  min-height: 70px;
   padding: 0 7%;
   display: flex;
   align-items: center;
@@ -34,13 +47,20 @@ nav {
 }
 
 nav a {
+  color: #343d34;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: #b59a77;
 }
 
 .logo {
+  color: #343d34;
   font: 25px 'Playfair Display';
   text-decoration: none;
 }
@@ -50,15 +70,21 @@ nav a {
   color: #b59a77;
 }
 
+/* ==========================================
+   CAPA PRINCIPAL
+========================================== */
+
 .hero {
   min-height: 610px;
   display: grid;
   place-items: center;
   color: white;
+
   background:
     linear-gradient(#343d34a8, #343d34a8),
-    url('assets/images/capa.jpg') center/cover,
+    url('Fotos/127af204-aa41-43ec-a834-e3c89088956e.jpeg') center 45% / cover,
     #777d6e;
+
   padding: 35px;
 }
 
@@ -80,6 +106,10 @@ nav a {
   letter-spacing: 5px;
 }
 
+/* ==========================================
+   BOTÕES
+========================================== */
+
 .btn {
   display: inline-block;
   border: 0;
@@ -92,6 +122,12 @@ nav a {
   text-transform: uppercase;
   cursor: pointer;
   margin: 8px;
+  transition: background .2s, transform .2s;
+}
+
+.btn:hover {
+  background: #424b3b;
+  transform: translateY(-2px);
 }
 
 .light {
@@ -99,11 +135,24 @@ nav a {
   color: #394034;
 }
 
+.light:hover {
+  background: #e7e4da;
+}
+
 .outline {
   border: 1px solid white;
   background: transparent;
   color: white;
 }
+
+.outline:hover {
+  background: white;
+  color: #394034;
+}
+
+/* ==========================================
+   CONTAGEM REGRESSIVA
+========================================== */
 
 .count,
 .section {
@@ -129,6 +178,10 @@ section > small {
   font-size: 10px;
 }
 
+/* ==========================================
+   TÍTULOS E TEXTOS
+========================================== */
+
 h2 {
   font: 42px 'Playfair Display';
   font-weight: 400;
@@ -140,14 +193,43 @@ h2 {
   margin: 15px auto;
 }
 
-.photo {
-  max-width: 600px;
-  margin: 35px auto;
-  padding: 65px;
-  background: #e7e4da;
-  color: #827b6d;
-  font: 20px 'Playfair Display';
+/* ==========================================
+   GALERIA DE FOTOS
+========================================== */
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 230px 230px;
+  gap: 14px;
+
+  max-width: 1050px;
+  margin: 45px auto 10px;
 }
+
+.photo-gallery img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: block;
+  object-fit: cover;
+  border-radius: 3px;
+  transition: transform .3s, filter .3s;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.02);
+  filter: brightness(.95);
+}
+
+.photo-gallery .photo-main {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* ==========================================
+   CARDS DO EVENTO
+========================================== */
 
 .cards {
   display: grid;
@@ -175,6 +257,14 @@ h2 {
   color: #9b876b;
 }
 
+.cards article a {
+  color: #59634f;
+}
+
+/* ==========================================
+   PRESENTES
+========================================== */
+
 .gift-grid {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -187,6 +277,10 @@ h2 {
   font: 24px 'Playfair Display';
   color: #59634f;
 }
+
+/* ==========================================
+   FORMULÁRIO RSVP
+========================================== */
 
 form {
   max-width: 600px;
@@ -213,6 +307,12 @@ textarea {
   font: 14px 'DM Sans';
 }
 
+input:focus,
+textarea:focus {
+  outline: 1px solid #9b876b;
+  border-color: #9b876b;
+}
+
 fieldset {
   border: 1px solid #ddd7cb;
   display: flex;
@@ -233,6 +333,14 @@ fieldset label,
   gap: 15px;
 }
 
+#status {
+  font-size: 13px;
+}
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
 footer {
   background: #59634f;
   color: white;
@@ -240,8 +348,13 @@ footer {
   font: 18px 'Playfair Display';
 }
 
+/* ==========================================
+   MODAL PIX
+========================================== */
+
 dialog {
   border: 0;
+  border-radius: 4px;
   max-width: 440px;
   width: calc(100% - 24px);
   padding: 32px;
@@ -273,16 +386,26 @@ dialog h2 {
   min-height: 120px;
 }
 
+#qr img,
+#qr canvas {
+  max-width: 100%;
+}
+
 .fine {
   font-size: 10px;
   color: #777;
 }
 
+/* ==========================================
+   RESPONSIVIDADE - CELULAR
+========================================== */
+
 @media (max-width: 650px) {
+
   header {
-    height: auto;
-    padding: 14px;
-    align-items: flex-start;
+    min-height: 60px;
+    padding: 12px 14px;
+    align-items: center;
   }
 
   .logo {
@@ -299,28 +422,83 @@ dialog h2 {
     font-size: 9px;
   }
 
+  .hero {
+    min-height: 560px;
+    padding: 25px 15px;
+    background-position: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 12vw, 65px);
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .btn {
+    margin: 5px;
+  }
+
+  .count,
+  .section {
+    padding: 55px 6%;
+  }
+
+  .count b {
+    display: inline-block;
+    font-size: 26px;
+    margin-left: 8px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
   .cards,
   .gift-grid,
   .two {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    min-height: 560px;
+  .photo-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 280px 160px 160px;
+    gap: 9px;
+    margin-top: 30px;
   }
 
-  .count b {
-    font-size: 26px;
-    margin-left: 8px;
+  .photo-gallery .photo-main {
+    grid-column: 1 / 3;
+    grid-row: 1;
   }
 
-  .section {
-    padding: 55px 6%;
+  .photo-gallery img {
+    border-radius: 3px;
+  }
+
+  fieldset {
+    gap: 10px;
+  }
+
+  footer {
+    padding: 28px 15px;
+    font-size: 16px;
   }
 }
+
+/* ==========================================
+   ACESSIBILIDADE
+========================================== */
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: .01ms !important;
   }
 }
