@@ -1,4 +1,4 @@
-```javascript
+
 // ==========================================
 // CONFIGURAÇÕES DO CASAMENTO
 // Bruno & Estefani
