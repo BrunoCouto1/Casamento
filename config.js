@@ -90,4 +90,4 @@ window.WEDDING_CONFIG = {
   ]
 
 };
-```
+
