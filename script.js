@@ -261,7 +261,7 @@
   // FORMULÁRIO RSVP
   // ==========================================
 
-  $("rsvp").addEventListener("submit", async event => {
+  $("rsvpForm").addEventListener("submit", async event => {
     event.preventDefault();
 
     const form = event.currentTarget;
