@@ -16,6 +16,11 @@
   // ==========================================
 
   function init() {
+    if (!config) {
+      console.error("Configurações do casamento não encontradas.");
+      return;
+    }
+
     $("noivo").textContent = config.groomName;
     $("noiva").textContent = config.brideName;
 
@@ -28,7 +33,6 @@
     }
 
     renderGifts();
-
     updateCountdown();
 
     setInterval(updateCountdown, 1000);
@@ -94,7 +98,6 @@
       });
 
       card.append(title, description, price, button);
-
       container.append(card);
     });
   }
@@ -157,7 +160,7 @@
       tlv("05", cleanText(pix.txid, 25))
     );
 
-    let payload =
+    const payload =
       tlv("00", "01") +
       merchantField +
       tlv("52", "0000") +
@@ -173,6 +176,8 @@
   }
 
   function updatePix() {
+    if (!selectedGift) return;
+
     const amount =
       selectedGift.value === null
         ? Number($("custom").value)
@@ -239,12 +244,10 @@
 
     try {
       await navigator.clipboard.writeText(element.value);
-
       alert("Copiado com sucesso!");
     } catch {
       element.select();
       document.execCommand("copy");
-
       alert("Conteúdo copiado!");
     }
   }
@@ -266,6 +269,13 @@
 
     const form = event.currentTarget;
 
+    if (!(form instanceof HTMLFormElement)) {
+      console.error("Elemento do formulário inválido.");
+      return;
+    }
+
+    if (!form.reportValidity()) return;
+
     const data = Object.fromEntries(
       new FormData(form).entries()
     );
@@ -280,42 +290,40 @@
 
     data.sentAt = new Date().toISOString();
 
-    $("status").textContent = "Enviando...";
+    const status = $("status");
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    status.textContent = "Enviando sua confirmação...";
+
+    submitButton.disabled = true;
 
     try {
-      if (config.rsvpEndpoint) {
-        await fetch(config.rsvpEndpoint, {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(data)
-        });
-
-        $("status").textContent =
-          "Resposta enviada. Obrigado!";
-      } else {
-        const saved = JSON.parse(
-          localStorage.getItem("rsvp_demo") || "[]"
-        );
-
-        saved.push(data);
-
-        localStorage.setItem(
-          "rsvp_demo",
-          JSON.stringify(saved)
-        );
-
-        $("status").textContent =
-          "Resposta salva somente neste dispositivo (modo demonstração).";
+      if (!config.rsvpEndpoint) {
+        throw new Error("URL do Google Apps Script não configurada.");
       }
+
+      await fetch(config.rsvpEndpoint, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(data)
+      });
+
+      status.textContent =
+        "Solicitação enviada! Confira se sua resposta foi registrada na planilha.";
 
       form.reset();
 
     } catch (error) {
-      $("status").textContent =
-        "Não foi possível enviar. Tente novamente.";
+      console.error("Erro no envio do RSVP:", error);
+
+      status.textContent =
+        "Não foi possível enviar sua confirmação. Tente novamente.";
+
+    } finally {
+      submitButton.disabled = false;
     }
   });
 
