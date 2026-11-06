@@ -18,7 +18,7 @@ window.WEDDING_CONFIG = {
     name: "Paróquia João Paulo II",
     address: "Hortolândia – SP",
     time: "Horário a definir",
-    mapsUrl: "R. José Roberto Lehn, 10 - Jardim Santa Clara do Lago I, Hortolândia - SP, 13186-360"
+    mapsUrl: "https://share.google/6sFF1EP2WQzVVjETF"
   },
 
   // RECEPÇÃO E FESTA
@@ -37,7 +37,7 @@ window.WEDDING_CONFIG = {
 
   // INTEGRAÇÃO DO FORMULÁRIO
   // Deixe vazio até configurarmos o Google Sheets.
-  rsvpEndpoint: "",
+  rsvpEndpoint: "https://script.google.com/macros/s/AKfycbzv54zd_qi0WQ4J9A1ZnEX0aPc0DI1rKYkj9uLeaI5wwyi-DgBGyTQOK4qnXNe55XrvLg/exec",
 
   // DADOS PIX
   // SUBSTITUIR ANTES DE DIVULGAR O SITE.
