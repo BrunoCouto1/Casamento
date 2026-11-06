@@ -42,8 +42,8 @@ window.WEDDING_CONFIG = {
   // DADOS PIX
   // SUBSTITUIR ANTES DE DIVULGAR O SITE.
   pix: {
-    key: "PREENCHER_CHAVE_PIX",
-    receiver: "NOME DO RECEBEDOR",
+    key: "19 998169995",
+    receiver: "BRUNO GUILHERME COUTO",
     city: "HORTOLANDIA",
     txid: "CASAMENTO2027"
   },
