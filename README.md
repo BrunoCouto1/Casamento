@@ -253,3 +253,4 @@ Esta implementação é um ponto de partida técnico, não uma consultoria jurí
 - [ ] Revisar política de privacidade e acesso à planilha.
 - [ ] Confirmar GitHub Pages em `main` e `/ (root)`.
 - [ ] Abrir o endereço publicado em janela anônima.
+
