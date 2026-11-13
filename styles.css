@@ -578,14 +578,15 @@ dialog h2 {
 }
 
 #story {
-  max-width: 750px;
-  margin: 25px auto;
-  line-height: 1.9;
+  max-width: 680px;
+  margin: 30px auto;
+  line-height: 2;
   text-align: center;
+  font-size: 16px;
 }
 
 #story p {
-  margin: 0 0 20px;
+  margin: 0 0 24px;
 }
 
 #story p:last-child {
