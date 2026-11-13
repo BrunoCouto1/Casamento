@@ -15,6 +15,18 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script defer src="script.js"></script>
 </head>
+  
+<dialog id="galleryLightbox" class="gallery-lightbox">
+  <button id="galleryClose" class="gallery-close" aria-label="Fechar">×</button>
+
+  <button id="galleryPrev" class="gallery-arrow gallery-prev" aria-label="Foto anterior">‹</button>
+
+  <img id="galleryExpanded" src="" alt="Foto dos noivos">
+
+  <button id="galleryNext" class="gallery-arrow gallery-next" aria-label="Próxima foto">›</button>
+
+  <div id="galleryCounter" class="gallery-counter"></div>
+</dialog>
 
 <body>
 
