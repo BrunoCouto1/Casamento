@@ -25,7 +25,10 @@
     $("noiva").textContent = config.brideName;
 
     $("church").textContent = config.church.name;
-    $("story").textContent = config.story;
+    $("story").innerHTML = config.story
+      .split(/\n\s*\n/)
+      .map(paragrafo => `<p>${paragrafo.trim()}</p>`)
+      .join("");
 
     if (config.church.mapsUrl) {
       $("churchMap").href = config.church.mapsUrl;
