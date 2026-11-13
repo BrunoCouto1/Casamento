@@ -75,35 +75,74 @@ nav a:hover {
 ========================================== */
 
 .hero {
-  min-height: 610px;
-  display: grid;
-  place-items: center;
-  color: white;
-
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 60px 25px;
+  color: #fff;
   background:
-    linear-gradient(#343d34a8, #343d34a8),
-    url('Fotos/127af204-aa41-43ec-a834-e3c89088956e.jpeg') center 45% / cover,
-    #777d6e;
+    linear-gradient(
+      rgba(25, 30, 25, .38),
+      rgba(25, 30, 25, .52)
+    ),
+    url("Fotos/foto1.jpeg") center 45% / cover no-repeat;
+}
 
-  padding: 35px;
+.hero > div {
+  max-width: 1000px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero small {
-  color: #eee0cc;
-  letter-spacing: 3px;
+  color: #f0dfc4;
+  letter-spacing: 5px;
+  font-size: 11px;
 }
 
 .hero h1 {
-  font: clamp(48px, 9vw, 88px) 'Playfair Display';
-  margin: 18px 0;
+  font: clamp(48px, 8vw, 105px) 'Playfair Display';
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 28px 0;
+}
+
+.hero h1 i {
+  color: #d0b28c;
 }
 
 .hero p {
-  font: 18px 'Playfair Display';
+  font: 20px 'Playfair Display';
+  margin: 20px 0;
 }
 
 .hero strong {
-  letter-spacing: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  letter-spacing: 6px;
+  font-size: 15px;
+}
+
+.hero .btn {
+  margin-top: 25px;
+  padding: 16px 28px;
+}
+
+@media (max-width: 650px) {
+  .hero {
+    min-height: 75vh;
+    background-position: 55% center;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
 }
 
 /* ==========================================
