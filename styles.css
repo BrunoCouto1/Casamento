@@ -576,3 +576,11 @@ dialog h2 {
   margin-top: 0;
   min-width: 180px;
 }
+
+#story {
+  max-width: 750px;
+  margin: 20px auto;
+  line-height: 2;
+  white-space: pre-line;
+  text-align: center;
+}
