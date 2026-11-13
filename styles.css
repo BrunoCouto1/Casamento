@@ -541,3 +541,38 @@ dialog h2 {
     transition-duration: .01ms !important;
   }
 }
+
+/* ALINHAMENTO DOS CARDS DE PRESENTES */
+.gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  min-height: 325px;
+}
+
+.gift h3 {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.gift p {
+  min-height: 42px;
+  margin: 10px 0;
+}
+
+.gift strong {
+  margin-top: auto;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift .btn {
+  margin-top: 0;
+  min-width: 180px;
+}
