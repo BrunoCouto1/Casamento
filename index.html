@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Casamento de Bruno e Estefani">
+  <meta name="theme-color" content="#faf8f4">
+
   <title>Bruno & Estefani | Casamento</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
@@ -15,284 +20,322 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script defer src="script.js"></script>
 </head>
-  
-<dialog id="galleryLightbox" class="gallery-lightbox">
-  <button id="galleryClose" class="gallery-close" aria-label="Fechar">×</button>
-
-  <button id="galleryPrev" class="gallery-arrow gallery-prev" aria-label="Foto anterior">‹</button>
-
-  <img id="galleryExpanded" src="" alt="Foto dos noivos">
-
-  <button id="galleryNext" class="gallery-arrow gallery-next" aria-label="Próxima foto">›</button>
-
-  <div id="galleryCounter" class="gallery-counter"></div>
-</dialog>
 
 <body>
 
-<header>
-  <a class="logo" href="#inicio">B <i>&</i> E</a>
+  <!-- CABEÇALHO -->
+  <header>
+    <a class="logo" href="#inicio">B <i>&</i> E</a>
 
-  <nav>
-    <a href="#historia">Nossa história</a>
-    <a href="#evento">O casamento</a>
-    <a href="#rsvp">Presença</a>
-    <a href="#presentes">Presentes</a>
-  </nav>
-</header>
+    <nav>
+      <a href="#historia">Nossa história</a>
+      <a href="#evento">O casamento</a>
+      <a href="#rsvp">Presença</a>
+      <a href="#presentes">Presentes</a>
+    </nav>
+  </header>
 
-<main>
+  <main>
 
-<section id="inicio" class="hero">
-  <div>
-    <small>VAMOS CELEBRAR O AMOR</small>
+    <!-- CAPA -->
+    <section id="inicio" class="hero">
+      <div>
+        <small>VAMOS CELEBRAR O AMOR</small>
 
-    <h1>
-      <span id="noivo">Bruno</span>
-      <i>&</i>
-      <span id="noiva">Estefani</span>
-    </h1>
+        <h1>
+          <span id="noivo">Bruno</span>
+          <i>&</i>
+          <span id="noiva">Estefani</span>
+        </h1>
 
-    <p>Um novo capítulo começa. E queremos você pertinho da gente.</p>
+        <p>Um novo capítulo começa. E queremos você pertinho da gente.</p>
 
-    <strong>05 · 12 · 2027</strong>
+        <strong>05 · 12 · 2027</strong>
 
-    <p>
-      <a class="btn light" href="#rsvp">Confirmar presença</a>
-      <a class="btn outline" href="#presentes">Presentear os noivos</a>
-    </p>
-  </div>
-</section>
+        <p>
+          <a class="btn light" href="#rsvp">Confirmar presença</a>
+          <a class="btn outline" href="#presentes">Presentear os noivos</a>
+        </p>
+      </div>
+    </section>
 
-<section class="count">
-  <small>CONTAGEM REGRESSIVA</small>
+    <!-- CONTAGEM REGRESSIVA -->
+    <section class="count">
+      <small>CONTAGEM REGRESSIVA</small>
 
-  <div>
-    <b id="days">000</b> dias
-    <b id="hours">00</b> horas
-    <b id="minutes">00</b> minutos
-    <b id="seconds">00</b> segundos
-  </div>
-</section>
+      <div>
+        <b id="days">000</b> dias
+        <b id="hours">00</b> horas
+        <b id="minutes">00</b> minutos
+        <b id="seconds">00</b> segundos
+      </div>
+    </section>
 
-<section id="historia" class="section">
-  <small>DOIS CAMINHOS, UMA HISTÓRIA</small>
+    <!-- NOSSA HISTÓRIA E GALERIA -->
+    <section id="historia" class="section">
 
-  <h2>Nossa história</h2>
+      <small>DOIS CAMINHOS, UMA HISTÓRIA</small>
 
-  <p id="story">
-    Nossa história continua sendo escrita, e será ainda mais especial com você fazendo parte desse momento.
-  </p>
+      <h2>Nossa história</h2>
 
-<div class="photo-gallery">
+      <p id="story">
+        Nossa história continua sendo escrita, e será ainda mais especial com você fazendo parte desse momento.
+      </p>
 
-  <img
-    class="photo-main"
-    src="Fotos/foto1.jpeg"
-    alt="Bruno e Estefani"
-    loading="lazy"
-  >
+      <div class="photo-gallery">
 
-  <img
-    src="Fotos/foto2.jpeg"
-    alt="Uma lembrança especial"
-    loading="lazy"
-  >
+        <img
+          class="photo-main"
+          src="Fotos/foto1.jpeg"
+          alt="Bruno e Estefani juntos"
+          loading="lazy"
+        >
 
-  <img
-    src="Fotos/foto3.jpeg"
-    alt="Um momento especial dos noivos"
-    loading="lazy"
-  >
+        <img
+          src="Fotos/foto2.jpeg"
+          alt="Uma lembrança especial dos noivos"
+          loading="lazy"
+        >
 
-  <img
-    src="Fotos/foto4.jpeg"
-    alt="Bruno e Estefani juntos"
-    loading="lazy"
-  >
+        <img
+          src="Fotos/foto3.jpeg"
+          alt="Um momento especial dos noivos"
+          loading="lazy"
+        >
 
-  <img
-    src="Fotos/foto5.jpeg"
-    alt="Nossa história"
-    loading="lazy"
-  >
+        <img
+          src="Fotos/foto4.jpeg"
+          alt="Bruno e Estefani juntos"
+          loading="lazy"
+        >
 
-</div>
+        <img
+          src="Fotos/foto5.jpeg"
+          alt="Uma lembrança da nossa história"
+          loading="lazy"
+        >
 
-</section>
+      </div>
 
-<section id="evento" class="section muted">
-  <small>ANOTE NA AGENDA</small>
+    </section>
 
-  <h2>O nosso casamento</h2>
+    <!-- EVENTO -->
+    <section id="evento" class="section muted">
 
-  <div class="cards">
+      <small>ANOTE NA AGENDA</small>
 
-    <article>
-      <small>CERIMÔNIA RELIGIOSA</small>
+      <h2>O nosso casamento</h2>
 
-      <h3 id="church">Paróquia João Paulo II</h3>
+      <div class="cards">
 
-      <p>Hortolândia – SP</p>
+        <article>
+          <small>CERIMÔNIA RELIGIOSA</small>
 
-      <b>05 de dezembro de 2027</b>
+          <h3 id="church">Paróquia João Paulo II</h3>
 
-      <p>Horário a definir</p>
+          <p>Hortolândia – SP</p>
 
-      <a id="churchMap" hidden target="_blank" rel="noopener noreferrer">
-        Ver no mapa ↗
-      </a>
-    </article>
+          <b>05 de dezembro de 2027</b>
 
-    <article>
-      <small>RECEPÇÃO E FESTA</small>
+          <p>Horário a definir</p>
 
-      <h3>Local a definir</h3>
+          <a id="churchMap" hidden target="_blank" rel="noopener noreferrer">
+            Ver no mapa ↗
+          </a>
+        </article>
 
-      <p>Hortolândia – SP</p>
+        <article>
+          <small>RECEPÇÃO E FESTA</small>
 
-      <b>Após a cerimônia</b>
+          <h3>Local a definir</h3>
 
-      <p>Endereço e horário serão divulgados em breve.</p>
-    </article>
+          <p>Hortolândia – SP</p>
 
-  </div>
+          <b>Após a cerimônia</b>
 
-  <p>
-    Estamos preparando tudo com carinho.
-    Atualizaremos os detalhes assim que forem confirmados.
-  </p>
-</section>
+          <p>Endereço e horário serão divulgados em breve.</p>
+        </article>
 
-<section id="rsvp" class="section">
-  <small>SUA PRESENÇA É NOSSO PRESENTE</small>
+      </div>
 
-  <h2>Confirme sua presença</h2>
+      <p>
+        Estamos preparando tudo com carinho.
+        Atualizaremos os detalhes assim que forem confirmados.
+      </p>
 
-  <p>Será uma alegria compartilhar esse dia com você.</p>
+    </section>
 
-  <form id="rsvpForm">
+    <!-- CONFIRMAÇÃO DE PRESENÇA -->
+    <section id="rsvp" class="section">
+
+      <small>SUA PRESENÇA É NOSSO PRESENTE</small>
+
+      <h2>Confirme sua presença</h2>
+
+      <p>Será uma alegria compartilhar esse dia com você.</p>
+
+      <form id="rsvpForm">
+
+        <label>
+          Nome completo
+          <input name="name" required maxlength="120">
+        </label>
+
+        <fieldset>
+          <legend>Você poderá comparecer?</legend>
+
+          <label>
+            <input type="radio" name="attendance" value="Sim" required>
+            Sim, estarei presente
+          </label>
+
+          <label>
+            <input type="radio" name="attendance" value="Não">
+            Não poderei comparecer
+          </label>
+        </fieldset>
+
+        <div class="two">
+
+          <label>
+            Quantidade de adultos
+            <input type="number" name="adults" min="0" max="20" value="1" required>
+          </label>
+
+          <label>
+            Quantidade de crianças
+            <input type="number" name="children" min="0" max="20" value="0" required>
+          </label>
+
+        </div>
+
+        <label>
+          Nome dos acompanhantes (opcional)
+          <textarea name="companions" maxlength="300"></textarea>
+        </label>
+
+        <label>
+          Mensagem para os noivos (opcional)
+          <textarea name="message" maxlength="500"></textarea>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="consent" required>
+          Concordo com o uso dessas informações exclusivamente para organizar o casamento.
+        </label>
+
+        <button class="btn" type="submit">
+          Enviar confirmação
+        </button>
+
+        <p id="status" role="status"></p>
+
+        <small>
+          Para corrigir ou excluir sua resposta, entre em contato com os noivos.
+        </small>
+
+      </form>
+
+    </section>
+
+    <!-- PRESENTES -->
+    <section id="presentes" class="section muted">
+
+      <small>UM CARINHO PARA NOSSA NOVA FASE</small>
+
+      <h2>Ajude-nos a celebrar este momento</h2>
+
+      <p>
+        As cotas são contribuições voluntárias para a festa,
+        a lua de mel e o início da vida a dois.
+      </p>
+
+      <div id="gifts" class="cards gift-grid"></div>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    Feito com amor, Bruno & Estefani · 05.12.2027
+  </footer>
+
+  <!-- GALERIA AMPLIADA -->
+  <dialog id="galleryLightbox" class="gallery-lightbox">
+
+    <button
+      id="galleryClose"
+      class="gallery-close"
+      type="button"
+      aria-label="Fechar galeria"
+    >×</button>
+
+    <button
+      id="galleryPrev"
+      class="gallery-arrow gallery-prev"
+      type="button"
+      aria-label="Foto anterior"
+    >‹</button>
+
+    <img
+      id="galleryExpanded"
+      src=""
+      alt="Foto dos noivos"
+    >
+
+    <button
+      id="galleryNext"
+      class="gallery-arrow gallery-next"
+      type="button"
+      aria-label="Próxima foto"
+    >›</button>
+
+    <div id="galleryCounter" class="gallery-counter"></div>
+
+  </dialog>
+
+  <!-- MODAL PIX -->
+  <dialog id="pix">
+
+    <button id="close" class="close" type="button">×</button>
+
+    <small>UM PRESENTE CHEIO DE CARINHO</small>
+
+    <h2 id="pixTitle">Sua contribuição</h2>
+
+    <p id="amount"></p>
+
+    <label id="customWrap" hidden>
+      Valor (R$)
+      <input id="custom" type="number" min="1" step="0.01" value="50">
+    </label>
+
+    <div id="qr"></div>
 
     <label>
-      Nome completo
-      <input name="name" required maxlength="120">
+      Chave Pix
+      <input id="key" readonly>
     </label>
 
-    <fieldset>
-      <legend>Você poderá comparecer?</legend>
-
-      <label>
-        <input type="radio" name="attendance" value="Sim" required>
-        Sim, estarei presente
-      </label>
-
-      <label>
-        <input type="radio" name="attendance" value="Não">
-        Não poderei comparecer
-      </label>
-    </fieldset>
-
-    <div class="two">
-
-      <label>
-        Quantidade de adultos
-        <input type="number" name="adults" min="0" max="20" value="1" required>
-      </label>
-
-      <label>
-        Quantidade de crianças
-        <input type="number" name="children" min="0" max="20" value="0" required>
-      </label>
-
-    </div>
-
-    <label>
-      Nome dos acompanhantes (opcional)
-      <textarea name="companions" maxlength="300"></textarea>
-    </label>
-
-    <label>
-      Mensagem para os noivos (opcional)
-      <textarea name="message" maxlength="500"></textarea>
-    </label>
-
-    <label class="check">
-      <input type="checkbox" name="consent" required>
-      Concordo com o uso dessas informações exclusivamente para organizar o casamento.
-    </label>
-
-    <button class="btn" type="submit">
-      Enviar confirmação
+    <button id="copyKey" class="btn" type="button">
+      Copiar chave
     </button>
 
-    <p id="status" role="status"></p>
+    <label>
+      Pix Copia e Cola
+      <textarea id="payload" rows="4" readonly></textarea>
+    </label>
 
-    <small>
-      Para corrigir ou excluir sua resposta, entre em contato com os noivos.
-    </small>
+    <button id="copyPix" class="btn" type="button">
+      Copiar código Pix
+    </button>
 
-  </form>
-</section>
+    <p class="fine">
+      O QR Code facilita a realização do Pix, mas a confirmação do pagamento deve ser consultada pelos noivos diretamente na conta bancária.
+    </p>
 
-<section id="presentes" class="section muted">
-  <small>UM CARINHO PARA NOSSA NOVA FASE</small>
-
-  <h2>Ajude-nos a celebrar este momento</h2>
-
-  <p>
-    As cotas são contribuições voluntárias para a festa,
-    a lua de mel e o início da vida a dois.
-  </p>
-
-  <div id="gifts" class="cards gift-grid"></div>
-</section>
-
-</main>
-
-<footer>
-  Feito com amor, Bruno & Estefani · 05.12.2027
-</footer>
-
-<dialog id="pix">
-
-  <button id="close" class="close">×</button>
-
-  <small>UM PRESENTE CHEIO DE CARINHO</small>
-
-  <h2 id="pixTitle">Sua contribuição</h2>
-
-  <p id="amount"></p>
-
-  <label id="customWrap" hidden>
-    Valor (R$)
-    <input id="custom" type="number" min="1" step=".01" value="50">
-  </label>
-
-  <div id="qr"></div>
-
-  <label>
-    Chave Pix
-    <input id="key" readonly>
-  </label>
-
-  <button id="copyKey" class="btn" type="button">
-    Copiar chave
-  </button>
-
-  <label>
-    Pix Copia e Cola
-    <textarea id="payload" rows="4" readonly></textarea>
-  </label>
-
-  <button id="copyPix" class="btn" type="button">
-    Copiar código Pix
-  </button>
-
-  <p class="fine">
-    O QR Code facilita a realização do Pix, mas a confirmação do pagamento deve ser consultada pelos noivos diretamente na conta bancária.
-  </p>
-
-</dialog>
+  </dialog>
 
 </body>
 </html>
