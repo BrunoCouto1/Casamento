@@ -579,8 +579,15 @@ dialog h2 {
 
 #story {
   max-width: 750px;
-  margin: 20px auto;
-  line-height: 2;
-  white-space: pre-line;
+  margin: 25px auto;
+  line-height: 1.9;
   text-align: center;
+}
+
+#story p {
+  margin: 0 0 20px;
+}
+
+#story p:last-child {
+  margin-bottom: 0;
 }
