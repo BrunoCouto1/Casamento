@@ -590,12 +590,9 @@ dialog h2 {
 }
 
 #story p:last-child {
+  margin-top: 28px;
   margin-bottom: 0;
-}
-
-#story p:last-child {
   font-family: 'Playfair Display', serif;
   font-size: 19px;
   color: #9b876b;
-  margin-top: 28px;
 }
