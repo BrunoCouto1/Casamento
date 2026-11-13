@@ -87,7 +87,7 @@ nav a:hover {
       rgba(25, 30, 25, .38),
       rgba(25, 30, 25, .52)
     ),
-    url("Fotos/foto1.jpeg") center 45% / cover no-repeat;
+    url("Fotos/foto3.jpeg") center 45% / cover no-repeat;
 }
 
 .hero > div {
