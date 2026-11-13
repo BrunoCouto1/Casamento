@@ -36,8 +36,10 @@
     }
 
     renderGifts();
+    
     updateCountdown();
-
+    setupGalleryLightbox();
+    
     setInterval(updateCountdown, 1000);
   }
 
@@ -329,6 +331,72 @@
       submitButton.disabled = false;
     }
   });
+
+  
+// ==========================================
+// GALERIA INTERATIVA
+// ==========================================
+
+function setupGalleryLightbox() {
+  const photos = Array.from(
+    document.querySelectorAll(".photo-gallery img")
+  );
+
+  const modal = $("galleryLightbox");
+  const expanded = $("galleryExpanded");
+  const counter = $("galleryCounter");
+
+  if (!photos.length || !modal) return;
+
+  let currentIndex = 0;
+
+  function showPhoto(index) {
+    currentIndex = (index + photos.length) % photos.length;
+
+    expanded.src = photos[currentIndex].src;
+    expanded.alt = photos[currentIndex].alt || "Foto dos noivos";
+
+    counter.textContent =
+      `${currentIndex + 1} / ${photos.length}`;
+  }
+
+  function nextPhoto() {
+    showPhoto(currentIndex + 1);
+  }
+
+  function previousPhoto() {
+    showPhoto(currentIndex - 1);
+  }
+
+  photos.forEach((photo, index) => {
+    photo.style.cursor = "pointer";
+
+    photo.addEventListener("click", () => {
+      showPhoto(index);
+      modal.showModal();
+    });
+  });
+
+  $("galleryClose").addEventListener("click", () => {
+    modal.close();
+  });
+
+  $("galleryNext").addEventListener("click", nextPhoto);
+  $("galleryPrev").addEventListener("click", previousPhoto);
+
+  modal.addEventListener("click", event => {
+    if (event.target === modal) {
+      modal.close();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (!modal.open) return;
+
+    if (event.key === "ArrowRight") nextPhoto();
+    if (event.key === "ArrowLeft") previousPhoto();
+  });
+  }
 
   // ==========================================
   // EXECUTAR QUANDO A PÁGINA CARREGAR
