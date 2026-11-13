@@ -30,7 +30,20 @@ window.WEDDING_CONFIG = {
   },
 
   // NOSSA HISTÓRIA
-  story: "Nossa história continua sendo escrita, e será ainda mais especial com você fazendo parte desse momento.",
+  story: `Toda grande história de amor é construída aos poucos, entre encontros, sorrisos, descobertas e momentos que se tornam inesquecíveis.
+
+  Ao longo da nossa caminhada, aprendemos que o amor está nas pequenas coisas, na parceria de todos os dias, no cuidado, no companheirismo e na vontade de seguir juntos, mesmo diante dos desafios.
+
+  Hoje, estamos prestes a viver um dos capítulos mais especiais das nossas vidas: dizer o nosso sim e celebrar o início de uma nova etapa, repleta de sonhos, planos e novas conquistas.
+
+  Escolhemos caminhar lado a lado, construir nossa família e compartilhar tudo o que a vida ainda reserva para nós.
+
+  E se existe algo que torna esse momento ainda mais especial, é poder dividir essa felicidade com as pessoas que fazem parte da nossa história.
+
+  Estamos preparando tudo com muito amor e será uma alegria ter você conosco nesse dia tão especial!
+
+  Com carinho,
+  Bruno & Estefani`,
 
   // PRAZO PARA CONFIRMAÇÃO
   rsvpDeadline: "2027-11-05",
